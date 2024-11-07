@@ -3,78 +3,101 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Discord Rider</title>
+    <title>Discord Rider - サイバースタイル</title>
     <meta name="description" content="このツールは、今後更新されません。そのため、Discord側が対策を行ったりAPIのバージョンを変更したとしてもこのツールは更新されません。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        /* 全体のリセットと背景 */
+        /* 全体のリセット */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        /* 背景スタイル */
         body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            font-family: 'Roboto Mono', monospace;
+            color: #00ffcc;
+            background: #000;
+            background-image: linear-gradient(45deg, #000000 25%, #0a0a0a 25%, #0a0a0a 50%, #000000 50%, #000000 75%, #0a0a0a 75%, #0a0a0a);
+            background-size: 40px 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 0;
+            overflow: hidden;
         }
-        
-        /* メッセージスタイル */
+
+        /* メッセージボックスのスタイル */
         .message {
             position: relative;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            background: rgba(10, 10, 10, 0.8);
+            color: #00ffcc;
             padding: 1em 1.5em;
+            border: 1px solid #00ffcc;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
             font-size: 1.1em;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
+        /* ホバー時のグロー効果 */
         .message:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc;
         }
-        
+
         /* ツールチップスタイル */
         .message span.remark {
             display: none;
             position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid #ddd;
-            color: #333;
+            background: rgba(0, 255, 204, 0.9);
+            border: 1px solid #00ffcc;
+            color: #000;
             padding: 0.8em;
             border-radius: 6px;
             width: 15em;
             line-height: 1.5em;
-            top: 100%;
+            top: 120%;
             left: 50%;
             transform: translateX(-50%);
-            margin-top: 10px;
             font-size: 0.9em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
             z-index: 10;
-        }
-        
-        .message a:hover span.remark {
-            display: block;
             animation: fadeIn 0.3s ease-in-out;
         }
-        
+
+        .message a:hover span.remark {
+            display: block;
+        }
+
+        /* フェードインアニメーション */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* その他の要素をサイバー風にスタイリング */
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #00b386;
+            text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc;
         }
     </style>
 </head>
