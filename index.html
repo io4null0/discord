@@ -21,7 +21,7 @@
         /* 背景スタイル */
         body {
             font-family: 'Roboto Mono', monospace;
-            color: #00ffcc;
+            color: #ff00ff;
             background: #000;
             background-image: linear-gradient(45deg, #000000 25%, #0a0a0a 25%, #0a0a0a 50%, #000000 50%, #000000 75%, #0a0a0a 75%, #0a0a0a);
             background-size: 40px 40px;
@@ -35,12 +35,12 @@
         /* メッセージボックスのスタイル */
         .message {
             position: relative;
-            background: rgba(10, 10, 10, 0.8);
-            color: #00ffcc;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #ff66ff;  /* ネオンピンク */
             padding: 1em 1.5em;
-            border: 1px solid #00ffcc;
+            border: 1px solid #ff00ff;
             border-radius: 8px;
-            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
             font-size: 1.1em;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -49,16 +49,16 @@
         /* ホバー時のグロー効果 */
         .message:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
         }
 
         /* ツールチップスタイル */
         .message span.remark {
             display: none;
             position: absolute;
-            background: rgba(0, 255, 204, 0.9);
-            border: 1px solid #00ffcc;
-            color: #000;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            border: 1px solid #66ffff; /* 明るいシアン色 */
+            color: #66ffff; /* シアン色 */
             padding: 0.8em;
             border-radius: 6px;
             width: 15em;
@@ -67,7 +67,7 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.9em;
-            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            box-shadow: 0 0 15px #66ffff, 0 0 30px #66ffff;
             z-index: 10;
             animation: fadeIn 0.3s ease-in-out;
         }
@@ -90,14 +90,14 @@
 
         /* その他の要素をサイバー風にスタイリング */
         a {
-            color: #00ffcc;
+            color: #ff66ff;
             text-decoration: none;
             font-weight: bold;
         }
 
         a:hover {
-            color: #00b386;
-            text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc;
+            color: #ff00ff;
+            text-shadow: 0 0 8px #ff66ff, 0 0 16px #ff00ff;
         }
     </style>
 </head>
