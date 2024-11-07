@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Discord Rider</title>
+    <title>Discord Rider - サイバースタイル</title>
     <meta name="description" content="このツールは、今後更新されません。そのため、Discord側が対策を行ったりAPIのバージョンを変更したとしてもこのツールは更新されません。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
         /* 背景スタイル */
         body {
             font-family: 'Roboto Mono', monospace;
-            color: #ff00ff;
+            color: #39ff14; /* 明るいネオングリーン */
             background: #000;
             background-image: linear-gradient(45deg, #000000 25%, #0a0a0a 25%, #0a0a0a 50%, #000000 50%, #000000 75%, #0a0a0a 75%, #0a0a0a);
             background-size: 40px 40px;
@@ -36,29 +36,30 @@
         .message {
             position: relative;
             background: linear-gradient(135deg, #1a1a1a, #333);
-            color: #ff66ff;  /* ネオンピンク */
+            color: #39ff14;  /* ネオングリーン */
             padding: 1em 1.5em;
-            border: 1px solid #ff00ff;
+            border: 1px solid #39ff14;
             border-radius: 8px;
-            box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+            box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
             font-size: 1.1em;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         /* ホバー時のグロー効果 */
         .message:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+            box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14;
         }
 
         /* ツールチップスタイル */
         .message span.remark {
             display: none;
             position: absolute;
-            background: linear-gradient(135deg, #1a1a1a, #333);
-            border: 1px solid #66ffff; /* 明るいシアン色 */
-            color: #66ffff; /* シアン色 */
+            background: rgba(0, 50, 0, 0.9);
+            border: 1px solid #39ff14;
+            color: #39ff14;
             padding: 0.8em;
             border-radius: 6px;
             width: 15em;
@@ -67,12 +68,13 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.9em;
-            box-shadow: 0 0 15px #66ffff, 0 0 30px #66ffff;
+            box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
             z-index: 10;
             animation: fadeIn 0.3s ease-in-out;
         }
 
-        .message a:hover span.remark {
+        /* ツールチップ表示 */
+        .message:hover span.remark {
             display: block;
         }
 
@@ -87,24 +89,13 @@
                 transform: translateY(0);
             }
         }
-
-        /* その他の要素をサイバー風にスタイリング */
-        a {
-            color: #ff66ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 8px #ff66ff, 0 0 16px #ff00ff;
-        }
     </style>
 </head>
 
 <body>
     <div class="message">
-        <a href="#">詳細<span class="remark">これはツールの詳細を説明するツールチップです。</span></a>
+        ツールについて
+        <span class="remark">これはツールの詳細を説明するツールチップです。</span>
     </div>
     <input type="hidden" id="is_login" value="false">
     <script src="script.js"></script>
